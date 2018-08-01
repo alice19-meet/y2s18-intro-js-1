@@ -20,8 +20,9 @@ var randomInt = getRandomInt(1, 100);
 // your code goes under here
 var guess=  prompt("Guess a number beween 1-100");
 	guess=parseInt(guess)
-
+var count=0
 while (guess!=randomInt){
+	count++
 
 	if (guess<randomInt){
 		alert("You guessed too low!")
@@ -33,7 +34,7 @@ while (guess!=randomInt){
 	guess=  prompt("Guess a number beween 1-100")
 }
 if (guess==randomInt){
-   document.write("You guessed correctly!")
+   document.write("You guessed correctly!"+count+"guesses")
 }
 
  </script>

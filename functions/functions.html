@@ -16,6 +16,40 @@ function isLetter(char) {
 }
 
 // Write your isPalindrome function here!
+function isPalindrome(pal){
+	var keptletters=""
+	for (var i=0; i< pal.length; i++ ){
+		if (isLetter(pal[i])){
+			keptletters+=pal[i]
+		}
+
+	}
+
+	document.write(keptletters)
+	var keptletters=keptletters.split("")
+	
+	var cop=keptletters.slice()
+	cop.reverse()
+	for (var j=0; j<cop.length; j++ ){
+		
+			if (!(keptletters[j]===cop[j])){
+				return false
+			}
+
+		
+	}
+return true;
+
+}
+
+
+
+
+
+var question=  prompt("Write  word to check if it's a palidrome.")
+
+console.log(isPalindrome(question))
+
 
     </script>
 </body>
